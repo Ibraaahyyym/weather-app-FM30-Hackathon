@@ -86,7 +86,7 @@ Throughout this challenge, I will:
 
 - **Challenge Page**: [Frontend Mentor – Weather App](https://www.frontendmentor.io/challenges/weather-app-K1FhddVm49)  
 - **Live Demo**: _[Add your live site link here]_  
-- **Solution Page**: _[Add your Frontend Mentor solution link here]_  
+- **Solution Page**: _[https://ibraaahyyym.github.io/weather-app-FM30-Hackathon/]_  
 - **GitHub Repo**: [weather-app-FM30-Hackathon](#)  
 
 ---
