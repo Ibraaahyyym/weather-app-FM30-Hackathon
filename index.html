@@ -74,6 +74,12 @@
         background-color: lightgreen;
         padding: 20px 30px;
       }
+      
+      #search #left{
+        dispsly: flex;
+        background-color: white;
+      }
+      
       #search input {
        
       }
@@ -87,7 +93,7 @@
 
       #search-btn{
         padding: 25px 50px;
-        background-color: grey;
+        background-color: orange;
       }
       
       a#search-btn {
@@ -202,8 +208,10 @@
 
       <!--  SEARCH TEXT FIELD STARTS HERE-->
       <div id="search">
-        <img id="search-icon" src="./weather-app-main/assets/images/icon-search.svg" />
-        <input type="text" placeholder="Search for a place..." />
+        <div id="left">
+          <img id="search-icon" src="./weather-app-main/assets/images/icon-search.svg" />
+          <input type="text" placeholder="Search for a place..." />
+        </div>
         <a id="search-btn" href="#">Search</a>
       </div>
        <!--  SEARCH TEXT FIELD ENDS HERE-->
