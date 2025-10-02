@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Weather app</title>
+
+    <style>
+      /* Corrected the selector from `attribution` to `.attribution` */
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      /* Corrected the selector from `attribution a` to `.attribution a` */
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+      body {
+        background-color: #03002e; /*#151B54*/
+      }
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5px 5px;
+        background-color: #03002e; /*#151B54*/
+      }
+      .left {
+        /*background-color:orange;*/
+        justify-content: flex-end;
+      }
+      .right {
+        background-color: #696969; /*#708090*/ /*#2F4F4F*/
+        height: 20px;
+        margin-right: 10px;
+        padding: 5px 5px;
+        border-radius: 5px;
+        display: flex;
+        max-width: 25%;
+        justify-content: space-evenly;
+        align-items: center;
+        color: white;
+      }
+      .attribution {
+        background-color: #03002e; /*#010048*/ /*#151B54*/ /*#2e4053*/ /*#1a1d23*/
+      }
+      h1 {
+        color: #ffffff;
+        text-align: center;
+        font-size: 55px;
+        font-family: Montserrat me;
+        /*letter-spacing: 5px;*/
+      }
+      #search {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        /*background-color: orange;*/
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-top: 10px;
+        margin-bottom: 30px;
+      }
+      #search input {
+        background-color: #151b54;
+        color: #ffffff;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        padding-right: 15%;
+        padding-left: 15%;
+        margin-left: 20px;
+        font-size: 17px;
+        border-radius: 7px;
+        border: none;
+      }
+      #search input::placeholder {
+        color: lightgray;
+      }
+      #search-icon {
+        z-index: 1;
+        margin-right: -48px;
+        /*padding-right: -20px;*/
+      }
+      a#search-btn {
+        text-decoration: none;
+        color: #ffffff;
+        /*text-align: center;*/
+        padding-top: 15px;
+        padding-bottom: 15px;
+        padding-left: 41%;
+        padding-right: 40%;
+        margin-left: 5px;
+        /*margin-right: auto;*/
+        width: 100%;
+        border-radius: 7px;
+        font-weight: lighy;
+        font-size: 16px;
+        background-color: #4169e1;
+      }
+      #search input:focus {
+        border: 1px solid blue;
+        outline: none;
+      }
+      #image-bg {
+        margin-top: 40px;
+        background-image: url('./bg-today-small.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        /*background-position: 100%;*/
+        color: #ffffff;
+        text-align: center;
+        height: 300px;
+        width: 96%;
+        border-radius: 20px;
+        margin-left: 2%;
+        margin-right: 2%;
+        margin-bottom: 20px;
+      }
+      #image-bg h2 {
+        /*background-color: red;*/
+        padding-top: 30px;
+        /*padding-bottom: 10px;*/
+        font-size: 30px;
+      }
+      #image-bg p {
+        margin-top: -15px;
+      }
+      #temp {
+        margin-top: -20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+      }
+      #image-bg img {
+        /* display: inline-block;*/
+        width: 150px;
+        height: 150px;
+        /*background-color: yellow;*/
+      }
+      #image-bg h1 {
+        /*display: inline-block;*/
+        /*background-color: yellow;*/
+        /*margin-top: ;*/
+        font-size: 82px;
+        font-family: 'Times New Roman';
+      }
+      #weather-report {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        padding: 0 5px;
+      }
+      .report {
+        width: 45%;
+        height: 120px;
+        margin-bottom: 20px;
+        border-radius: 10px;
+        background-color: #151b54;
+      }
+      .report p {
+        font-size: 18px;
+        color: #ffffff;
+        margin-left: 20px;
+        margin-top: 15px;
+      }
+      .report .value {
+        color: #ffffff;
+        font-size: 25px;
+      }
+      #daily-forecast {
+        color: #ffffff;
+        margin-left: 20px;
+      }
+      .forecast {
+        display: flex;
+        max-width: 100%;
+        margin-left: 20px;
+        margin-right: 15px;
+        gap: 10px;
+      }
+      .days {
+        background-color: yellow;
+        height: 150px;
+        min-width: 150px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- The structure is reordered to place comments logically. -->
+    <!-- The `attribution` divs are consolidated to fix nesting issues. -->
+    <div class="main-content">
+      <nav>
+        <img src="./assets/images/./logo.svg" width="" />
+        <div class="right">
+          <img src="./assets/images/icon-units.svg" />
+          <h3>Units</h3>
+          <img src="./assets/images/icon-dropdown.svg" />
+        </div>
+      </nav>
+
+      <div class="header">
+        <h1>How's the sky looking today?</h1>
+      </div>
+
+      <div id="search">
+        <img id="search-icon" src="./assets/images/icon-search.svg"" />
+        <input type="text" placeholder="Search for a place..." />
+        <a id="search-btn" href="#">Search</a>
+      </div>
+
+      <div id="image-bg">
+        <h2>Berlin, Germany</h2>
+        <p>Tuesday, August 5, 2025</p>
+        <div id="temp">
+          <img src="./assets/images/icon-sunny.webp" />
+          <h1>20°</h1>
+        </div>
+      </div>
+
+      <div class="weather-reports-container">
+        <div id="weather-report">
+          <div class="report">
+            <p>Feels Like</p>
+            <p class="value">18°</p>
+          </div>
+          <div class="report">
+            <p>Humidity</p>
+            <p class="value">46%</p>
+          </div>
+        </div>
+        <div id="weather-report">
+          <div class="report">
+            <p>Wind</p>
+            <p class="value">14 km/h</p>
+          </div>
+          <div class="report">
+            <p>Precipitation</p>
+            <p class="value">0 mm</p>
+          </div>
+        </div>
+      </div>
+
+      <h2 id="daily-forecast">Daily forecast</h2>
+      <div class="forecast">
+        <div class="days"></div>
+        <div class="days"></div>
+        <div class="days"></div>
+        <div class="days"></div>
+        <div class="days"></div>
+        <div class="days"></div>
+        <div class="days"></div>
+      </div>
+    </div>
+
+    <!-- The original `attribution` element was improperly nested. Moved to bottom. -->
+    <div class="attribution">
+      <!-- Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. -->
+      <!-- Coded by <a href="#">Your Name Here</a>.-->
+    </div>
+
+    <script>
+      // A function to call on successful location retrieval
+function success(position) {
+  const latitude = position.coords.latitude;
+  const longitude = position.coords.longitude;
+
+  alert('Location retrieved successfully.');
+  alert(`Latitude: ${latitude}`);
+  alert(`Longitude: ${longitude}`);
+  alert('done');
+}
+
+// A function to handle errors
+function error(err) {
+  alert.warn(`ERROR(${err.code}): ${err.message}`);
+}
+
+// Options for a more accurate result
+const options = {
+  enableHighAccuracy: true,
+  timeout: 5000,
+  maximumAge: 0,
+};
+
+// Request the user's current position
+navigator.geolocation.getCurrentPosition(success, error, options);
+
+    </script>
+  </body>
+</html>
