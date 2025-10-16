@@ -151,7 +151,7 @@
         display: flex;
         margin: 32px 78px;
         justify-content: space-between;
-        height: 500px;
+        height: fit-content;
         /*background-color: yellowgreen;*/
       }
 
@@ -176,7 +176,7 @@
 
 
       .report-row-thin{
-        height: 150px;
+        height: 114px;
         width: 75px;
         background-color:  #151b54;
         margin-bottom: 16px;
@@ -205,9 +205,9 @@
       #weather-report-right{
         display: flex;
         /*justify-content: space-between;*/
-        gap: 13px;
         flex-direction: column;
-        align-items: space-between;
+        gap: 7px;
+        /*justify-content: space-between;*/
         padding: 32px 16px; 
         width: 30%;
         /*background-color:beige*/
@@ -215,7 +215,7 @@
 
       .right-panel-report{
         background-color: hsl(234, 60%, 21%);
-        height: 40px;
+        height: 50px;
         width: 100%;
         border-radius: 11px;
       }
@@ -281,6 +281,7 @@
       </div>
       </div>
       <div id="weather-report-right">
+        <div class="right-panel-report"></div>
         <div class="right-panel-report"></div>
         <div class="right-panel-report"></div>
         <div class="right-panel-report"></div>
