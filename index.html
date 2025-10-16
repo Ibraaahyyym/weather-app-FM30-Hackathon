@@ -160,7 +160,7 @@
         /*display: flex;*/
         padding: 32px 16px;   
         width: 60%;
-        /*background-color: #696969;*/
+        background-color: #696969;
         /*background-color: beige;*/
         /*border-radius: 16px;*/
       }
@@ -195,6 +195,7 @@
       .item-2{
         display: flex;
         justify-content: space-between;
+        
         /*background-color: red;*/
       }
 
@@ -206,20 +207,40 @@
         display: flex;
         /*justify-content: space-between;*/
         flex-direction: column;
-        gap: 7px;
-        /*justify-content: space-between;*/
-        padding: 32px 16px; 
+        /*gap: 7px;*/
+        /*justify-content: space-between*/;
+        gap: 19px;
+        padding-left: 32px;
+        padding-right: 32px;
+        padding-top: 32px;
+        padding-bottom: 16px;
         width: 30%;
-        /*background-color:beige*/
+        background-color: gray;
+        
       }
 
       .right-panel-report{
         background-color: hsl(234, 60%, 21%);
-        height: 50px;
+        height: 45px;
         width: 100%;
         border-radius: 11px;
       }
+      
+      #right-panel-report-top{
+        display: flex;
+        color: white;
+        background-color:lightgreen ;
+        height: 50px;
+        
+        border-radius: 11px;
+      }
 
+      #days-dropdown{
+        display: flex;
+        
+        background-color: #151b54;;
+        padding: 8px 64px;
+      }
 
      /*RIGHT SUB SECTION*/
 
@@ -270,6 +291,7 @@
           <div class="report-row"></div>
           <div class="report-row"></div>
         </div>
+      <p style="color: white;">Daily Forecast</p>
       <div class="item-2">
         <div class="report-row-thin"></div>
           <div class="report-row-thin"></div>
@@ -281,7 +303,10 @@
       </div>
       </div>
       <div id="weather-report-right">
-        <div class="right-panel-report"></div>
+        <div id="right-panel-report-top">
+          <p>Hourly forecast</p>
+          <p id="days-dropdown"> jjjj</p>
+        </div>
         <div class="right-panel-report"></div>
         <div class="right-panel-report"></div>
         <div class="right-panel-report"></div>
