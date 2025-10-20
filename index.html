@@ -228,6 +228,8 @@
       
       #right-panel-report-top{
         display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
         color: white;
         background-color:hsl(228, 45%, 44%);
         height: 50px;
@@ -243,6 +245,35 @@
       }
 
      /*RIGHT SUB SECTION*/
+
+      .tuesday{
+        display: flex;
+        align-items: flex-start;
+      }
+
+      #hourly-forecast-item-1{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: white;
+        /*background-color: hsl(234, 60%, 21%);*/
+        height: 45px;
+        margin-bottom: ;
+        width: 100%;
+        border-radius: 11px;
+      }
+
+      #hourly-forecast-text{
+        display: flex;
+        display: inline-block;
+        justify-content: space-between;
+      }
+
+      #tuesday-dropdown{
+        background-color: gray;
+        padding: 6px 8px;
+        border-radius: 11px;
+      }
 
 
 
@@ -303,9 +334,14 @@
       </div>
       </div>
       <div id="weather-report-right">
-        <div id="right-panel-report-top">
-        
+        <div id="hourly-forecast-item-1">
+          <div id="hourly-forecast-text">Hourly forecast</div>
+            <div id="tuesday-dropdown">
+              Tuesday
+              <img src="./weather-app-main/assets/images/icon-dropdown.svg">
+            </div>
         </div>
+
         <div class="right-panel-report"></div>
         <div class="right-panel-report"></div>
         <div class="right-panel-report"></div>
